@@ -11,20 +11,17 @@ Producer → Kafka → Spark Structured Streaming
         → Gold Layer (1-Min Window Aggregations + Watermarking)
         → PostgreSQL (Gold Tables)
         → Streamlit Live Dashboard
+        
 📐 Architecture Diagram
-![alt text](architecture.png)
+![Architecture](screenshots/architecture.png)
+
+
 ⚙️ Tech Stack
-
 Apache Kafka (Event Streaming)
-
 Apache Spark Structured Streaming
-
 PostgreSQL (Analytical Storage)
-
 Streamlit (Live Dashboard)
-
 Docker (Containerization)
-
 Python (PySpark, Kafka Producer)
 
 📊 Real-Time Metrics Generated
@@ -70,31 +67,21 @@ Watermark handling for late events
 Writes aggregated results to PostgreSQL via JDBC sink
 
 Gold Tables:
-
 revenue_per_minute
-
 revenue_per_category
-
 orders_per_payment
-
 total_orders_per_minute
-
 avg_order_value
 
 🗄️ PostgreSQL Output
+![PostGres data output](screenshots/postgres_data.png)
 
 📈 Live Dashboard
-
 Features:
-
 Auto-refresh every 5 seconds
-
 Real-time revenue trend chart
-
 Category breakdown
-
 Payment method distribution
-
 KPI metrics (Total Orders, Avg Order Value)
 
 🚀 How to Run the Project
@@ -109,34 +96,23 @@ docker exec -it spark spark-submit \
 python producer/producer.py
 4️⃣ Run Dashboard
 streamlit run dashboard/dashboard.py
-🎯 Key Concepts Demonstrated
 
+
+🎯 Key Concepts Demonstrated:
 Real-time streaming architecture design
-
 Structured Streaming with watermarking
-
 Window-based aggregations
-
 Streaming-to-PostgreSQL sink
-
 Multi-layer data lake architecture (Bronze/Silver/Gold)
-
 Live analytics dashboarding
-
 End-to-end distributed data pipeline
 
-🧠 Learning Outcomes
-
+🧠 Learning Outcomes:
 Through this project, I gained hands-on experience in:
-
 Designing scalable streaming systems
-
 Handling late-arriving data with watermarking
-
 Writing streaming aggregations to relational databases
-
 Building production-style data engineering pipelines
-
 Integrating real-time analytics with visualization tools
 
 📂 Project Structure
