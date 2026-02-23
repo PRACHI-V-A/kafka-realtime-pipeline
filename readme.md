@@ -11,11 +11,11 @@ Producer → Kafka → Spark Structured Streaming
         → Gold Layer (1-Min Window Aggregations + Watermarking)
         → PostgreSQL (Gold Tables)
         → Streamlit Live Dashboard
-        
+```
 📐 Architecture Diagram
 ![Architecture](screenshots/architecture.png)
 
-
+```
 ⚙️ Tech Stack
 Apache Kafka (Event Streaming)
 Apache Spark Structured Streaming
@@ -59,10 +59,10 @@ revenue_per_category
 orders_per_payment
 total_orders_per_minute
 avg_order_value
-
+```
 🗄️ PostgreSQL Output:
 ![PostGres data output](screenshots/postgres_data.png)
-
+```
 📈 Live Dashboard
 Features:
 Auto-refresh every 5 seconds
