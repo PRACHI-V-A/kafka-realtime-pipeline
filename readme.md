@@ -1,5 +1,5 @@
 🚀 Real-Time Ecommerce Analytics Platform
-
+```
 An end-to-end real-time data engineering pipeline built using Kafka, Spark Structured Streaming, PostgreSQL, and Streamlit.
 
 This project simulates ecommerce order events and processes them in real time to generate live business analytics dashboards.
@@ -27,43 +27,30 @@ Python (PySpark, Kafka Producer)
 📊 Real-Time Metrics Generated
 
 The system computes live analytics using 1-minute tumbling windows with watermarking:
-
 Revenue per minute
-
 Revenue per product category
-
 Orders per payment method
-
 Total orders per minute
-
 Average order value
-
 All metrics are written to PostgreSQL and visualized in real time.
 
 🥉 Bronze Layer
 
 Raw JSON event storage
-
 Preserves original streaming data
-
 Ensures traceability and replay capability
 
 🥈 Silver Layer
 
 Parses Kafka JSON events
-
 Converts event timestamps
-
 Calculates revenue (price × quantity)
-
 Filters invalid/null records
 
 🥇 Gold Layer
 
 1-minute window-based aggregations
-
 Watermark handling for late events
-
 Writes aggregated results to PostgreSQL via JDBC sink
 
 Gold Tables:
@@ -115,24 +102,28 @@ Writing streaming aggregations to relational databases
 Building production-style data engineering pipelines
 Integrating real-time analytics with visualization tools
 
-📂 Project Structure
+
+📁 Project Structure
 realtime-ecommerce-analytics/
 │
 ├── producer/
-│   └── producer.py
+│ └── producer.py
 │
 ├── spark/
-│   └── spark_stream.py
+│ └── spark_stream.py
 │
 ├── dashboard/
-│   └── dashboard.py
+│ └── dashboard.py
 │
 ├── docker-compose.yml
 ├── requirements.txt
 ├── README.md
 └── screenshots/
-    ├── architecture.png
-    ├── dashboard.png
-    ├── postgres_data.png
+├── architecture.png
+├── dashboard.png
+└── postgres_data.png
+
 👩‍💻 Author
 Prachi Adhalage
+
+```
