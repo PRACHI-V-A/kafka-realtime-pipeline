@@ -73,7 +73,7 @@ orders_per_payment
 total_orders_per_minute
 avg_order_value
 
-🗄️ PostgreSQL Output
+🗄️ PostgreSQL Output:
 ![PostGres data output](screenshots/postgres_data.png)
 
 📈 Live Dashboard
